@@ -47,8 +47,34 @@ python -m venv venv
 source venv/bin/activate   # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
+### 🔹 3. Set the Google API Key
 
-### 🔹 3. Create the Vector Store
+To use the Gemini model, set your `GOOGLE_API_KEY`.
+
+#### Option A: Set it in Python (Quick Test)
+```python
+import os
+os.environ["GOOGLE_API_KEY"] = "your-api-key-here"
+```
+
+#### Option B: Set it in the Terminal (Recommended)
+
+**Linux/macOS:**
+```bash
+export GOOGLE_API_KEY="your-api-key-here"
+```
+
+**Windows CMD:**
+```cmd
+set GOOGLE_API_KEY=your-api-key-here
+```
+
+**Windows PowerShell:**
+```powershell
+$env:GOOGLE_API_KEY="your-api-key-here"
+```
+
+### 🔹 4. Create the Vector Store
 
 ```bash
 python vector_store_setup.py
